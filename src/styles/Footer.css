@@ -1,0 +1,35 @@
+.footer {
+  border-top: 1px solid var(--color-border);
+  padding: 32px 0;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer__logo {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: color var(--transition);
+}
+
+.footer__logo:hover {
+  color: var(--color-accent-light);
+}
+
+.footer__bracket {
+  color: var(--color-accent-light);
+}
+
+.footer__copy,
+.footer__built {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
