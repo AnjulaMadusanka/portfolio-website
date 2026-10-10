@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import '../styles/Hero.css';
 
-const roles = ['Software Engineer', 'Full-Stack Developer', 'Problem Solver'];
+const roles = ['Software Engineer', 'Full-Stack Developer', 'Odoo ERP Developer', 'AWS Practitioner'];
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -39,8 +39,9 @@ export default function Hero() {
           <span className="hero__cursor" aria-hidden="true">|</span>
         </div>
         <p className="hero__desc">
-          I build clean, performant, and scalable software  & website — from backend APIs to polished
-          user interfaces. Passionate about writing code that makes a difference.
+          Full-stack engineer with 5+ years of experience building web, mobile, and enterprise
+          applications with React, React Native, and Node.js — now developing Odoo ERP modules and
+          running production workloads on AWS.
         </p>
 
         <div className="hero__actions">

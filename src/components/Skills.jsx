@@ -2,24 +2,34 @@ import '../styles/Skills.css';
 
 const categories = [
   {
+    name: 'Languages',
+    icon: '💻',
+    skills: ['JavaScript', 'TypeScript', 'Python', 'Java', 'SQL', 'PHP'],
+  },
+  {
     name: 'Frontend',
     icon: '🖥',
-    skills: ['React','React-Native','Redux','XML', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS'],
+    skills: ['React.js', 'Next.js', 'React Native', 'Redux', 'HTML5', 'CSS3', 'Tailwind CSS'],
   },
   {
     name: 'Backend',
     icon: '⚙️',
-    skills: ['Node.js', 'Express', 'Java','Spring Boot', 'PHP','Laravel', 'REST APIs', 'Python','FastAPI'],
+    skills: ['Node.js', 'Express.js', 'FastAPI', 'REST APIs', 'WebSockets', 'Odoo ERP', 'XML', 'Spring Boot', 'Laravel'],
   },
   {
-    name: 'Database',
+    name: 'Databases',
     icon: '🗄',
-    skills: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Firebase'],
+    skills: ['PostgreSQL', 'MySQL', 'MariaDB', 'MongoDB', 'Redis', 'Firebase'],
   },
   {
-    name: 'Tools & DevOps',
-    icon: '🔧',
-    skills: ['AWS','Azure','Git', 'Docker', 'Linux', 'CI/CD'],
+    name: 'Cloud & DevOps',
+    icon: '☁️',
+    skills: ['AWS (EC2, S3)', 'Docker', 'CI/CD', 'Git', 'Linux', 'Azure'],
+  },
+  {
+    name: 'AI & Practices',
+    icon: '🤖',
+    skills: ['OpenAI API', 'Claude', 'GitHub Copilot', 'Cursor', 'Gemini', 'Agile/Scrum', 'TDD', 'Code Review', 'Clean Code'],
   },
 ];
 

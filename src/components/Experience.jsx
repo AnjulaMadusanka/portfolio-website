@@ -3,32 +3,47 @@ import '../styles/Experience.css';
 const experiences = [
   {
     role: 'Software Engineer',
-    company: 'PowerX / LearnX',
-    period: '2026 – Present',
-    desc: 'Developed and maintained ERP modules using Odoo, including inventory, HR, and Finance. Implemented new features and optimize performance, resulting in a 30% increase in efficiency.',
-    tags: ['XML', 'Python', 'PostgreSQL', 'AWS', 'MySQL'],
+    company: 'PowerX Technology',
+    period: 'Feb 2026 – Present',
+    points: [
+      'Translate stakeholder requirements into technical designs and custom Odoo modules (Python, XML, PostgreSQL).',
+      'Own features end to end, from development and testing to production release, in an Agile team.',
+      'Manage AWS infrastructure and troubleshoot live systems to keep client ERPs stable and available.',
+    ],
+    tags: ['Odoo', 'Python', 'XML', 'PostgreSQL', 'AWS'],
   },
   {
     role: 'Associate Software Engineer',
-    company: 'Eventistry Agency',
-    period: '2024 – 2026',
-    desc: 'Built REST APIs and React frontends for client projects. Collaborated closely with stakeholders to deliver pixel-perfect UIs on tight deadlines.',
-    tags: ['React.js','React-Native', 'Express', 'MongoDB', 'Figma'],
+    company: 'Eventistry',
+    period: 'Nov 2023 – Jan 2026',
+    points: [
+      'Owned end-to-end product features in a fast-paced startup, consistently shipping within sprint commitments.',
+      'Refactored core modules to improve performance, stability, and user experience.',
+      'Partnered with designers and product owners to deliver clean, well-tested implementations.',
+    ],
+    tags: ['React.js', 'React Native', 'Node.js', 'Express', 'MongoDB'],
   },
   {
     role: 'Associate Software Engineer',
     company: 'Emageia',
-    period: '2021 – 2024',
-    desc: 'Created SaaS applications using modern web technologies like React.js, Node.js, focusing on user experience and performance optimization.',
-    tags: ['React.js', 'Node.js', 'Typescript', 'Redux', 'MariaDB','Docker'],
+    period: 'Oct 2021 – Jun 2023',
+    points: [
+      'Designed feature logic, database stored procedures, and automated tests from client requirements.',
+      'Evaluated and integrated third-party libraries, balancing performance and project constraints.',
+      'Delivered fixes and enhancements for scheduled releases and maintenance patches.',
+    ],
+    tags: ['React.js', 'Node.js', 'TypeScript', 'Redux', 'MariaDB', 'Docker'],
   },
   {
     role: 'Software Engineer Intern',
     company: 'Emageia',
-    period: '2021 – 2021',
-    desc: 'Assisted in developing web applications and gained hands-on experience with full-stack development, contributing to both frontend and backend tasks.',
+    period: 'Apr 2021 – Sep 2021',
+    points: [
+      'Took part in code reviews and researched tools that improved team productivity.',
+      'Diagnosed and resolved customer-reported software issues.',
+    ],
     tags: ['React.js', 'Node.js', 'Express', 'MariaDB', 'Git'],
-  }
+  },
 ];
 
 export default function Experience() {
@@ -40,7 +55,7 @@ export default function Experience() {
         <div className="section-divider" />
 
         <div className="timeline">
-          {experiences.map(({ role, company, period, desc, tags }, i) => (
+          {experiences.map(({ role, company, period, points, tags }, i) => (
             <div key={i} className="timeline__item">
               <div className="timeline__dot" />
               <div className="timeline__card">
@@ -51,7 +66,11 @@ export default function Experience() {
                   </div>
                   <span className="timeline__period">{period}</span>
                 </div>
-                <p className="timeline__desc">{desc}</p>
+                <ul className="timeline__desc">
+                  {points.map(point => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
                 <div className="timeline__tags">
                   {tags.map(tag => (
                     <span key={tag} className="timeline__tag">{tag}</span>

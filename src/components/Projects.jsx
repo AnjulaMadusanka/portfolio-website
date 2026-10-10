@@ -1,11 +1,27 @@
 import '../styles/Projects.css';
 
 const projects = [
-    {
-    title: 'HCIM-Pules : Human Resource Management System',
+  {
+    title: 'WPU ERP : Odoo ERP for Western Pacific University',
     description:
-      'A Saas based web application with JWT authentication, role-based access control, resource management, dashboard analytics, budget tracking, and email notifications.',
-    tags: ['Node.js', 'React.js', 'MariaDB', 'Redux'],
+      'A university-wide ERP for Western Pacific University, Papua New Guinea, adapting Odoo HR, inventory, and operations modules to its administrative processes. Integrated with third-party services through REST APIs to automate previously manual data flows, and hosted on AWS EC2 with S3 storage and automated deployment pipelines. (Code not public due to company policy)',
+    tags: ['Odoo', 'Python', 'PostgreSQL', 'REST APIs', 'AWS'],
+    live: 'https://erp.wpu.ac.pg/',
+    featured: true,
+  },
+  {
+    title: 'Workshiftly : SaaS HR Management Platform',
+    description:
+      'Led a system-wide frontend architecture revamp in React.js, improving cross-browser rendering speed and Core Web Vitals. Optimized secure media upload and processing pipelines, and built high-throughput report export scripts for complex MariaDB datasets. (Code not public due to company policy)',
+    tags: ['React.js', 'Node.js', 'MariaDB'],
+    live: 'https://workshiftly.com/',
+    featured: true,
+  },
+  {
+    title: 'HCIM Pulse : HR Management Web Application',
+    description:
+      'An HR management web app with an interactive analytics dashboard backed by lightweight, cached API endpoints, dynamic schema-agnostic CRUD on custom relational models, and asynchronous report generation that keeps heavy processing off the browser main thread.',
+    tags: ['React.js', 'Redux', 'Node.js', 'MariaDB'],
     github: 'https://github.com/AnjulaMadusanka/HCIM_Pulse',
     live: 'https://hcim.io/',
     featured: true,
@@ -17,7 +33,7 @@ const projects = [
     tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
     github: 'https://github.com/AnjulaMadusanka/WLMS',
     // live: '#',
-    featured: true,
+    featured: false,
   },
 
   {
@@ -97,16 +113,20 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-              <div className="project-card__links">
-                <a href={github} target="_blank" rel="noreferrer" className="project-card__link" aria-label="GitHub">
-                  <GithubIcon /> Code
-                </a>
-                {live && (
-                  <a href={live} target="_blank" rel="noreferrer" className="project-card__link" aria-label="Live demo">
-                    <ExternalIcon /> Live
-                  </a>
-                )}
-              </div>
+              {(github || live) && (
+                <div className="project-card__links">
+                  {github && (
+                    <a href={github} target="_blank" rel="noreferrer" className="project-card__link" aria-label="GitHub">
+                      <GithubIcon /> Code
+                    </a>
+                  )}
+                  {live && (
+                    <a href={live} target="_blank" rel="noreferrer" className="project-card__link" aria-label="Live demo">
+                      <ExternalIcon /> Live
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>

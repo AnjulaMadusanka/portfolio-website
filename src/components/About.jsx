@@ -28,15 +28,17 @@ export default function About() {
 
           <div className="about__body">
             <p className="about__text">
-              I&apos;m <strong>Anjula Madusanka</strong>, a passionate software engineer who loves
-              turning complex problems into elegant, efficient solutions. I have a strong
-              foundation in both frontend and backend development, with a focus on building
-              applications that are not only functional but also delightful to use.
+              I&apos;m <strong>Anjula Madusanka</strong>, a full-stack software engineer with 5+ years
+              of experience building and shipping web, mobile, and enterprise applications with
+              JavaScript, TypeScript, React.js, React Native, and Node.js. Currently I develop Odoo
+              ERP modules and third-party integrations at PowerX Technology, and run production
+              workloads on AWS.
             </p>
             <p className="about__text">
-              When I&apos;m not writing code, I enjoy exploring new technologies, contributing to
-              open-source projects, and continuously leveling up my skills. I believe great
-              software is built at the intersection of technical excellence and thoughtful design.
+              I have a track record of owning features end to end, leading frontend modernization,
+              and turning business requirements into reliable, well-tested software within Agile
+              teams. I use AI-assisted tools like Claude, Copilot, and Cursor to ship faster without
+              compromising code quality.
             </p>
 
             <div className="about__stats">
